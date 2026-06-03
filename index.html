@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seguranca Alimentar e Producao Sustentavel — Pesquisa Agrinho 2026">
+    <meta name="theme-color" content="#c45c26">
+    <title>Terra Viva | Seguranca Alimentar — Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="preloader" aria-hidden="true">
+        <div class="preloader-content">
+            <div class="preloader-spinner"></div>
+            <p data-key="preload">Terra Viva</p>
+        </div>
+    </div>
+
+    <a href="#conteudo" class="skip-link" data-key="skip">Pular para o conteudo</a>
+
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#inicio" class="logo-link" aria-label="Voltar ao inicio">
+                <span class="logo-symbol" aria-hidden="true">🌱</span>
+                <span class="logo-text">Terra Viva</span>
+            </a>
+            <nav class="main-nav" role="navigation" aria-label="Menu principal">
+                <a href="#introducao" class="nav-link active" data-key="nav_intro">Introducao</a>
+                <a href="#pilares" class="nav-link" data-key="nav_pilares">Pilares</a>
+                <a href="#problemas" class="nav-link" data-key="nav_problemas">Desafios</a>
+                <a href="#solucoes" class="nav-link" data-key="nav_solucoes">Solucoes</a>
+                <a href="#exemplos" class="nav-link" data-key="nav_exemplos">Exemplos</a>
+                <a href="#acao" class="nav-link" data-key="nav_acao">Acao</a>
+            </nav>
+            <div class="header-actions">
+                <button type="button" class="control-btn font-btn" id="fontToggle" aria-label="Ajustar tamanho da fonte" title="Ajustar fonte" aria-pressed="false">A↺</button>
+                <button type="button" class="control-btn contrast-btn" id="contrastToggle" aria-label="Alternar alto contraste" title="Alto contraste" aria-pressed="false">◐</button>
+                <button type="button" class="control-btn theme-toggle" id="themeToggle" aria-label="Alternar modo escuro" title="Modo escuro" aria-pressed="false">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="seed-menu" id="seedMenu" aria-label="Menu mobile">
+        <button type="button" class="seed-trigger" id="seedTrigger" aria-label="Abrir menu" aria-expanded="false">
+            <span class="seed-icon">🌱</span>
+        </button>
+        <div class="seed-items" id="seedItems" aria-hidden="true">
+            <a href="#introducao" class="seed-item" data-i="0" aria-label="Introducao"><span>🌿</span></a>
+            <a href="#pilares" class="seed-item" data-i="1" aria-label="Pilares"><span>🍽️</span></a>
+            <a href="#problemas" class="seed-item" data-i="2" aria-label="Desafios"><span>🔥</span></a>
+            <a href="#solucoes" class="seed-item" data-i="3" aria-label="Solucoes"><span>🌱</span></a>
+            <a href="#exemplos" class="seed-item" data-i="4" aria-label="Exemplos"><span>🌍</span></a>
+            <a href="#acao" class="seed-item" data-i="5" aria-label="Acao"><span>✊</span></a>
+        </div>
+    </div>
+
+    <main id="conteudo">
+        <section class="hero-section" id="inicio" aria-labelledby="hero-title">
+            <div class="hero-overlay"></div>
+            <div class="hero-visual">
+                <canvas id="topographyCanvas" class="topography-canvas" aria-hidden="true"></canvas>
+            </div>
+            <div class="hero-content">
+                <span class="hero-tag" data-key="hero_tag">Pesquisa 2026</span>
+                <h1 class="hero-title" id="hero-title">Seguranca Alimentar e<br><span class="highlight">Producao Sustentavel</span></h1>
+                <p class="hero-subtitle" data-key="hero_desc">Comida de verdade para todos, sem destruir o planeta — uma analise aprofundada sobre o futuro da alimentacao global.</p>
+                <div class="hero-stats" id="heroStats">
+                    <div class="reservoir" data-target="735">
+                        <svg class="reservoir-svg" viewBox="0 0 100 120">
+                            <rect class="reservoir-glass" x="10" y="10" width="80" height="100" rx="10" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                            <rect class="reservoir-fill" x="12" y="110" width="76" height="0" rx="8" fill="var(--accent)" opacity="0.85"/>
+                            <line x1="10" y1="40" x2="90" y2="40" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+                            <line x1="10" y1="70" x2="90" y2="70" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                        <span class="reservoir-number">0</span>
+                        <span class="reservoir-label" data-key="res_fome">Milhoes com fome</span>
+                    </div>
+                    <div class="reservoir" data-target="10">
+                        <svg class="reservoir-svg" viewBox="0 0 100 120">
+                            <rect class="reservoir-glass" x="10" y="10" width="80" height="100" rx="10" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                            <rect class="reservoir-fill" x="12" y="110" width="76" height="0" rx="8" fill="var(--accent)" opacity="0.85"/>
+                            <line x1="10" y1="40" x2="90" y2="40" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+                            <line x1="10" y1="70" x2="90" y2="70" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                        <span class="reservoir-number">0</span>
+                        <span class="reservoir-label" data-key="res_bio">Bi habitantes 2050</span>
+                    </div>
+                    <div class="reservoir" data-target="30">
+                        <svg class="reservoir-svg" viewBox="0 0 100 120">
+                            <rect class="reservoir-glass" x="10" y="10" width="80" height="100" rx="10" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                            <rect class="reservoir-fill" x="12" y="110" width="76" height="0" rx="8" fill="var(--accent)" opacity="0.85"/>
+                            <line x1="10" y1="40" x2="90" y2="40" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+                            <line x1="10" y1="70" x2="90" y2="70" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                        <span class="reservoir-number">0</span>
+                        <span class="reservoir-label" data-key="res_desper">% desperdicio</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#introducao" class="btn-primary" data-key="hero_btn">Explorar pesquisa</a>
+                </div>
+            </div>
+            <div class="hero-scroll" role="button" tabindex="0" aria-label="Rolar para baixo">⌵</div>
+        </section>
+
+        <section class="content-section" id="introducao" aria-labelledby="intro-title">
+            <div class="section-container section-narrow">
+                <header class="section-header text-center">
+                    <span class="section-tag" data-key="intro_tag">01. Introducao</span>
+                    <h2 class="section-title" id="intro-title" data-key="intro_title">Afinal, o que e seguranca alimentar?</h2>
+                </header>
+                <div class="section-body">
+                    <p class="lead-text text-center" data-key="intro_lead">Seguranca alimentar nao e so "ter comida no prato". E ter comida de qualidade, em quantidade suficiente, todos os dias, de forma acessivel e sem passar vontade.</p>
+                    <p data-key="intro_p1">A Organizacao das Nacoes Unidas define assim: todo mundo tem direito a uma alimentacao nutritiva, respeitando suas tradicoes culturais e garantindo que as proximas geracoes tambem vao conseguir comer.</p>
+                    <p data-key="intro_p2">Hoje, cerca de <strong>735 milhoes de pessoas</strong> passam fome no mundo. E o paradoxo e cruel: enquanto uns passam fome, outros desperdicam comida, e o planeta paga o preco com solo cansado, agua poluida e florestas derrubadas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-alt" id="pilares" aria-labelledby="pilares-title">
+            <div class="section-container">
+                <header class="section-header text-center">
+                    <span class="section-tag" data-key="pilares_tag">02. Os Tres Pilares</span>
+                    <h2 class="section-title" id="pilares-title" data-key="pilares_title">Os tres pilares da parada</h2>
+                </header>
+                <div class="slider-wrapper" id="pilaresSlider">
+                    <div class="slider-viewport">
+                        <div class="slider-track" id="pilaresTrack">
+                            <div class="slider-slide">
+                                <div class="slide-icon">🍽️</div>
+                                <h3 data-key="p1_h">Disponibilidade de alimentos</h3>
+                                <p data-key="p1_p">Nao adianta nada se a comida existe mas nao chega em todo mundo. Tem que ter producao suficiente, armazenamento adequado e distribuicao que funcione. O Brasil e um gigante na producao de graos, mas ainda tem gente passando fome.</p>
+                            </div>
+                            <div class="slider-slide">
+                                <div class="slide-icon">💰</div>
+                                <h3 data-key="p2_h">Acesso economico</h3>
+                                <p data-key="p2_p">Comida tem no mercado, mas da pra comprar? Se o preco do feijao dispara e o salario nao acompanha, a pessoa deixa de comer. Inflacao, desemprego e desigualdade impactam diretamente quem consegue botar comida na mesa.</p>
+                            </div>
+                            <div class="slider-slide">
+                                <div class="slide-icon">🌿</div>
+                                <h3 data-key="p3_h">Uso sustentavel</h3>
+                                <p data-key="p3_p">E o pilar mais esquecido. Da pra produzir hoje sem destruir o amanha. Agricultura que queima floresta e agrotoxico em excesso resolvem a fome de hoje, mas criam fome pra amanha. Solo infertil e agua contaminada reduzem a producao futura.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button type="button" class="slider-btn prev-slide" id="prevPilar" aria-label="Slide anterior">←</button>
+                        <div class="slider-dots" id="pilarDots"></div>
+                        <button type="button" class="slider-btn next-slide" id="nextPilar" aria-label="Proximo slide">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="problemas" aria-labelledby="probs-title">
+            <div class="section-container">
+                <header class="section-header text-center">
+                    <span class="section-tag" data-key="prob_tag">03. Desafios Atuais</span>
+                    <h2 class="section-title" id="probs-title" data-key="prob_title">Os problemas que a gente enfrenta agora</h2>
+                </header>
+                <div class="cards-grid">
+                    <article class="tilt-card desert-card" data-direction="left">
+                        <div class="desert-marker">01</div>
+                        <div class="desert-body">
+                            <h3 data-key="des1_h">Mudancas climaticas</h3>
+                            <p data-key="des1_p">Enchente destroi lavoura, seca mata o gado, calor extremo queima plantacao. Pra cada grau de aquecimento global, a produtividade do milho cai 7%, do trigo 6% e do arroz 3%.</p>
+                        </div>
+                        <div class="desert-crack" aria-hidden="true"></div>
+                    </article>
+                    <article class="tilt-card desert-card" data-direction="right">
+                        <div class="desert-marker">02</div>
+                        <div class="desert-body">
+                            <h3 data-key="des2_h">Degradacao do solo</h3>
+                            <p data-key="des2_p">O solo e um organismo vivo cheio de fungos, bacterias e minhocas. Plantar a mesma coisa todo ano e jogar agrotoxico em excesso mata o solo. Ja perdemos um terco dos solos agricolas do mundo.</p>
+                        </div>
+                        <div class="desert-crack" aria-hidden="true"></div>
+                    </article>
+                    <article class="tilt-card desert-card" data-direction="left">
+                        <div class="desert-marker">03</div>
+                        <div class="desert-body">
+                            <h3 data-key="des3_h">Escassez de agua</h3>
+                            <p data-key="des3_p">A agricultura consome 70% da agua doce do planeta. Com rios secando e chuva irregular, a conta nao fecha. Sem agua, nao tem comida.</p>
+                        </div>
+                        <div class="desert-crack" aria-hidden="true"></div>
+                    </article>
+                    <article class="tilt-card desert-card" data-direction="right">
+                        <div class="desert-marker">04</div>
+                        <div class="desert-body">
+                            <h3 data-key="des4_h">Desperdicio</h3>
+                            <p data-key="des4_p">Enquanto 735 milhoes passam fome, um terco de toda a comida produzida vai pro lixo. Da 1,3 bilhao de toneladas por ano. E agua, terra, trabalho e energia jogados fora.</p>
+                        </div>
+                        <div class="desert-crack" aria-hidden="true"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-alt" id="solucoes" aria-labelledby="sols-title">
+            <div class="section-container">
+                <header class="section-header text-center">
+                    <span class="section-tag" data-key="sol_tag">04. Solucoes</span>
+                    <h2 class="section-title" id="sols-title" data-key="sol_title">Como produzir mais, destruindo menos?</h2>
+                </header>
+                <div class="germination-grid">
+                    <article class="tilt-card germ-card">
+                        <div class="germ-sprout" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" width="48" height="48"><path class="sprout-path" d="M24 44 Q24 20 8 12 Q16 24 24 28 Q32 24 40 12 Q24 20 24 44" fill="var(--accent)" stroke="none"/></svg>
+                        </div>
+                        <h3 data-key="sol1_h">Agroecologia</h3>
+                        <p data-key="sol1_p">Consorcio de culturas, rotacao e adubacao verde enriquecem o solo naturalmente. O resultado e comida saudavel, solo vivo e menos dependencia de insumos caros.</p>
+                    </article>
+                    <article class="tilt-card germ-card">
+                        <div class="germ-sprout" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" width="48" height="48"><path class="sprout-path" d="M24 44 Q24 20 8 12 Q16 24 24 28 Q32 24 40 12 Q24 20 24 44" fill="var(--accent)" stroke="none"/></svg>
+                        </div>
+                        <h3 data-key="sol2_h">Agricultura Inteligente</h3>
+                        <p data-key="sol2_p">Plantio direto, captacao de agua da chuva e irrigacao de precisao ajudam a enfrentar as mudancas climaticas sem desperdicar recursos.</p>
+                    </article>
+                    <article class="tilt-card germ-card">
+                        <div class="germ-sprout" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" width="48" height="48"><path class="sprout-path" d="M24 44 Q24 20 8 12 Q16 24 24 28 Q32 24 40 12 Q24 20 24 44" fill="var(--accent)" stroke="none"/></svg>
+                        </div>
+                        <h3 data-key="sol3_h">Agricultura Familiar</h3>
+                        <p data-key="sol3_p">A agricultura familiar produz 70% da comida que vai pra mesa do brasileiro. Costuma usar menos agrotoxico, diversificar mais e respeitar o solo.</p>
+                    </article>
+                    <article class="tilt-card germ-card">
+                        <div class="germ-sprout" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" width="48" height="48"><path class="sprout-path" d="M24 44 Q24 20 8 12 Q16 24 24 28 Q32 24 40 12 Q24 20 24 44" fill="var(--accent)" stroke="none"/></svg>
+                        </div>
+                        <h3 data-key="sol4_h">Economia Circular</h3>
+                        <p data-key="sol4_p">Resto de comida vira adubo, cascas viram receitas, residuo vira racao e embalagens sao retornaveis. Fecha os ciclos e cria renda.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="exemplos" aria-labelledby="ex-title">
+            <div class="section-container">
+                <header class="section-header text-center">
+                    <span class="section-tag" data-key="ex_tag">05. Exemplos Reais</span>
+                    <h2 class="section-title" id="ex-title" data-key="ex_title">Exemplos que estao dando certo</h2>
+                </header>
+                <div class="cards-grid three-col">
+                    <article class="tilt-card mycelium-card">
+                        <div class="mycelium-flag">🇧🇷</div>
+                        <h3 data-key="ex1_h">Brasil — Rede Ecoa</h3>
+                        <p data-key="ex1_p">Rede de agroecologia em Pernambuco e Bahia que conecta agricultores familiares, escolas, restaurantes e feiras. Comida saudavel direto do produtor pro prato, preco justo e incentivo pra plantar sem veneno. Ja atende mais de 200 comunidades.</p>
+                    </article>
+                    <article class="tilt-card mycelium-card">
+                        <div class="mycelium-flag">🇰🇪</div>
+                        <h3 data-key="ex2_h">Quenia — Regenerativa no semiarido</h3>
+                        <p data-key="ex2_p">Com chuvas escassas e solo fraco, agricultores adotaram captacao de agua, plantio direto e integracao com arvores nativas. Aumentaram a producao de milho e feijao em 3 vezes sem irrigacao artificial.</p>
+                    </article>
+                    <article class="tilt-card mycelium-card">
+                        <div class="mycelium-flag">🇮🇳</div>
+                        <h3 data-key="ex3_h">India — Revolucao branca do leite</h3>
+                        <p data-key="ex3_p">A India e o maior produtor de leite do mundo e 70% vem de pequenos produtores. O modelo de cooperativas Amul garante coleta, processamento e venda com preco justo.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-alt" id="quiz" aria-labelledby="quiz-title">
+            <div class="section-container section-narrow">
+                <header class="section-header text-center">
+                    <span class="section-tag" data-key="quiz_tag">06. Quiz</span>
+                    <h2 class="section-title" id="quiz-title" data-key="quiz_title">Teste seus conhecimentos</h2>
+                </header>
+                <form id="quizForm">
+                    <fieldset>
+                        <legend data-key="q1">1. Qual porcentagem da agua doce mundial a agricultura consome?</legend>
+                        <label><input type="radio" name="q1" value="a"> 30%</label>
+                        <label><input type="radio" name="q1" value="b"> 50%</label>
+                        <label><input type="radio" name="q1" value="c"> 70%</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend data-key="q2">2. A agroecologia e apenas "plantar sem veneno"?</legend>
+                        <label><input type="radio" name="q2" value="a"> Sim</label>
+                        <label><input type="radio" name="q2" value="b"> Nao</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend data-key="q3">3. Quantas toneladas de comida vao pro lixo por ano no mundo?</legend>
+                        <label><input type="radio" name="q3" value="a"> 500 milhoes</label>
+                        <label><input type="radio" name="q3" value="b"> 1,3 bilhao</label>
+                        <label><input type="radio" name="q3" value="c"> 2 bilhoes</label>
+                    </fieldset>
+                    <button type="button" id="btnQuiz" class="btn-primary" data-key="btn_quiz">Ver resultado</button>
+                    <div id="quizResult" class="result-box" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="content-section section-alt" id="acao" aria-labelledby="acao-title">
+            <div class="section-container">
+                <header class="section-header text-center">
+                    <span class="section-tag" data-key="acao_tag">07. Acao</span>
+                    <h2 class="section-title" id="acao-title" data-key="acao_title">O que cada um pode fazer</h2>
+                </header>
+                <div class="tabs-container" id="acaoTabs">
+                    <div class="tabs-nav" role="tablist" aria-label="Perfis de acao">
+                        <button type="button" class="tab-btn active" role="tab" id="tab-agri" aria-selected="true" aria-controls="panel-agri" tabindex="0">
+                            <span class="tab-icon" aria-hidden="true">🚜</span>
+                            <span data-key="tab_agri">Agricultor</span>
+                        </button>
+                        <button type="button" class="tab-btn" role="tab" id="tab-cons" aria-selected="false" aria-controls="panel-cons" tabindex="-1">
+                            <span class="tab-icon" aria-hidden="true">🛒</span>
+                            <span data-key="tab_cons">Consumidor</span>
+                        </button>
+                        <button type="button" class="tab-btn" role="tab" id="tab-gest" aria-selected="false" aria-controls="panel-gest" tabindex="-1">
+                            <span class="tab-icon" aria-hidden="true">🏛️</span>
+                            <span data-key="tab_gest">Gestor</span>
+                        </button>
+                        <button type="button" class="tab-btn" role="tab" id="tab-educ" aria-selected="false" aria-controls="panel-educ" tabindex="-1">
+                            <span class="tab-icon" aria-hidden="true">📢</span>
+                            <span data-key="tab_educ">Educador</span>
+                        </button>
+                    </div>
+                    <div class="tabs-panels">
+                        <article class="tab-panel active" id="panel-agri" role="tabpanel" aria-labelledby="tab-agri">
+                            <ul class="action-list">
+                                <li data-key="agri1">Busque assistencia tecnica rural — muitos programas publicos oferecem de graca.</li>
+                                <li data-key="agri2">Experimente tecnicas agroecologicas, nem que seja num canteiro pequeno.</li>
+                                <li data-key="agri3">Entre em cooperativas ou associacoes — sozinho e mais dificil.</li>
+                            </ul>
+                        </article>
+                        <article class="tab-panel" id="panel-cons" role="tabpanel" aria-labelledby="tab-cons" hidden>
+                            <ul class="action-list">
+                                <li data-key="cons1">Prefira produtos de agricultura familiar (feiras organicas, grupos de consumo responsavel).</li>
+                                <li data-key="cons2">Evite desperdicio: planeje as compras, aproveite cascas e talos, congele o que sobrar.</li>
+                                <li data-key="cons3">Valorize comida de verdade, nao ultraprocessados.</li>
+                            </ul>
+                        </article>
+                        <article class="tab-panel" id="panel-gest" role="tabpanel" aria-labelledby="tab-gest" hidden>
+                            <ul class="action-list">
+                                <li data-key="gest1">Crie linhas de credito especificas para agricultura sustentavel.</li>
+                                <li data-key="gest2">Fortaleca a merenda escolar com compra direta da agricultura familiar (PNAE).</li>
+                                <li data-key="gest3">Invista em armazenamento e estradas rurais; apoie feiras e mercados locais.</li>
+                            </ul>
+                        </article>
+                        <article class="tab-panel" id="panel-educ" role="tabpanel" aria-labelledby="tab-educ" hidden>
+                            <ul class="action-list">
+                                <li data-key="educ1">Fale sobre o tema. Quanto mais gente entender, mais facil cobrar acoes concretas.</li>
+                                <li data-key="educ2">Traga exemplos locais e praticos para a sala de aula ou redes sociais.</li>
+                                <li data-key="educ3">Promova oficinas de compostagem e hortas escolares.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="conclusao" aria-labelledby="conc-title">
+            <div class="section-container section-narrow">
+                <header class="section-header text-center">
+                    <span class="section-tag" data-key="conc_tag">08. Conclusao</span>
+                    <h2 class="section-title" id="conc-title" data-key="conc_title">Pra fechar: o futuro e agora</h2>
+                </header>
+                <div class="conclusion-body">
+                    <p class="lead-text text-center" data-key="conc_lead">Seguranca alimentar e producao sustentavel nao sao sonho distante. Sao urgentes e possiveis.</p>
+                    <p data-key="conc_p1">A gente tem tecnologia, conhecimento e exemplos funcionando. O que falta e escala — fazer com que o que ja funciona em pequenas comunidades vire politica publica de verdade.</p>
+                    <p data-key="conc_p2">Se a gente continuar produzindo do jeito de hoje, vamos destruir o planeta e mesmo assim ainda vai ter gente com fome. Se mudarmos a chave — agroecologia, agricultura familiar forte, desperdicio zero, distribuicao justa — da pra alimentar 10 bilhoes de pessoas.</p>
+                    <p class="text-center" data-key="conc_p3"><strong>Comida de verdade, pra todo mundo, sem destruir o amanha. Isso e seguranca alimentar sustentavel. E esta ao nosso alcance.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-alt" id="referencias" aria-labelledby="ref-title">
+            <div class="section-container">
+                <header class="section-header text-center">
+                    <span class="section-tag" data-key="ref_tag">09. Referencias</span>
+                    <h2 class="section-title" id="ref-title" data-key="ref_title">Principais referencias</h2>
+                </header>
+                <ol class="references-list" id="referencesList">
+                    <li class="ref-item" data-year="2024">FAO — Organizacao das Nacoes Unidas para a Alimentacao e a Agricultura. Relatorios anuais sobre seguranca alimentar, 2024.</li>
+                    <li class="ref-item" data-year="2025">IPES-Food — International Panel of Experts on Sustainable Food Systems. Painel de especialistas, 2025.</li>
+                    <li class="ref-item" data-year="2024">EMBRAPA — Empresa Brasileira de Pesquisa Agropecuaria. Estudos sobre agricultura sustentavel no Brasil, 2024.</li>
+                    <li class="ref-item" data-year="2025">Forum Mundial da Alimentacao. Discussoes sobre o futuro da producao de comida, 2025.</li>
+                    <li class="ref-item" data-year="2024">Via Campesina — Movimento internacional de agricultores pela agroecologia, 2024.</li>
+                    <li class="ref-item" data-year="2025">Rede Ecoa — Rede de agroecologia em Pernambuco e Bahia, Brasil, 2025.</li>
+                    <li class="ref-item" data-year="2024">MST — Movimento dos Trabalhadores Rurais Sem Terra. Praticas de agroecologia, 2024.</li>
+                </ol>
+                <div class="references-filter">
+                    <label for="refSort" class="filter-label" data-key="lbl_ordenar">Ordenar referencias:</label>
+                    <select id="refSort" class="filter-select">
+                        <option value="default" data-key="opt_original">Ordem original</option>
+                        <option value="year-asc" data-key="opt_asc">Ano (crescente)</option>
+                        <option value="year-desc" data-key="opt_desc">Ano (decrescente)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span>Terra Viva</span>
+                <p data-key="foot_proj">Pesquisa desenvolvida para o Concurso Agrinho 2026 — Programacao.</p>
+                <p data-key="foot_cont">Conteudo 100% autoral baseado em pesquisa cientifica e movimentos de agroecologia.</p>
+            </div>
+            <div class="footer-info">
+                <p data-key="foot_ref">Referencias: FAO, IPES-Food, EMBRAPA, Forum Mundial da Alimentacao, Via Campesina, MST, Rede Ecoa.</p>
+            </div>
+        </div>
+        <div class="footer-copy">© 2026 · Terra Viva · Seguranca Alimentar e Producao Sustentavel</div>
+    </footer>
+
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
